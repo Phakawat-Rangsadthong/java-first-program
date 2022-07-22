@@ -17,7 +17,7 @@ public class BestLoanRates {
             System.out.println("No available rates for term: " + loanTermInYears + " years");
         }
         else{
-            System.out.println("Best Available Rate: " + getRates(loanTermInYears) + "%");
+            System.out.println("Best Available Rate: " + bestRate + "%");
         }
         scanner.close();
     }
@@ -26,7 +26,7 @@ public class BestLoanRates {
 
     public static float getRates(int loanTermInYears){
         if (bestRates.containsKey(loanTermInYears)){
-            return loanTermInYears;
+            return bestRates.get(loanTermInYears);
         }
         return 0.0f;
     }
